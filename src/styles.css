@@ -1,0 +1,136 @@
+body {
+  background-color: #f5f7fb;
+  font-family: "Inter", sans-serif;
+  margin: 0;
+  min-width: 360px;
+}
+
+.container {
+  min-height: 100vh;
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.bottom-blob {
+  border-radius: 30% 32% 24% 67% / 30% 68% 23% 40%;
+  background-color: rgb(166, 224, 247);
+  height: 400px;
+  width: 400px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  z-index: -1;
+  transform: translate(-20%, 20%);
+}
+
+.top-blob {
+  border-radius: 30% 32% 24% 67% / 30% 68% 23% 40%;
+  background-color: rgb(247, 247, 166);
+  height: 400px;
+  width: 400px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: -1;
+  transform: translate(20%, -20%);
+}
+
+.start-page {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 10px;
+}
+
+.quiz-title {
+  font-size: 3.5rem;
+  font-weight: 300;
+  color: #293264;
+}
+
+.quiz-description {
+  text-align: center;
+  font-weight: 300;
+  color: #293264;
+}
+
+.start-button {
+  font-size: 1.25rem;
+  font-family: "Inter", sans-serif;
+  font-weight: 200;
+  padding: 10px 40px;
+  border: none;
+  background-color: #293264;
+  color: white;
+  border-radius: 10px;
+  margin-top: 30px;
+}
+
+.question-elements {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: left;
+  gap: 2em;
+  margin: 0 auto;
+  width: 60%;
+}
+
+.all-answers {
+  display: flex;
+  gap: 2em;
+}
+
+.choice {
+  color: #293264;
+  border: solid 1px #293264;
+  padding: 10px;
+  border-radius: 20px;
+}
+
+.question-title {
+  color: #293264;
+}
+
+.list-elements {
+  border-bottom: solid rgba(128, 128, 128, 0.534) 1px;
+}
+
+.list-elements::marker {
+  font-size: 1.5rem;
+  font-family: "Inter", sans-serif;
+  color: #293264;
+}
+
+.check-button {
+  font-size: 1.25rem;
+  font-family: "Inter", sans-serif;
+
+  align-self: center;
+  padding: 10px 40px;
+  border: none;
+  background-color: #293264;
+  color: white;
+  border-radius: 10px;
+  margin-top: 30px;
+  width: 200px;
+}
+
+.score-holder {
+  align-self: center;
+  font-size: 1.5rem;
+  color: #293264;
+}
+
+.correct {
+  background-color: rgb(57, 216, 123);
+  color: #293264;
+  padding: 10px;
+  border-radius: 20px;
+}
