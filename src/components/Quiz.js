@@ -1,15 +1,16 @@
 import React from "react";
 import he from "he";
 import { nanoid } from "nanoid";
-
+import useWindowDimensions from "../useWindowDimensions";
 import Confetti from "react-confetti";
 
 export default function Quiz() {
   const [win, setWin] = React.useState(false);
   const [finished, setFinished] = React.useState(false);
   const [questions, setQuestions] = React.useState([]);
-  const width = window.innerWidth;
-  const height = window.innerheight;
+  // const width = window.innerWidth;
+  // const height = window.innerheight;
+  const { height, width } = useWindowDimensions();
 
   React.useEffect(() => {
     playagain();
@@ -42,6 +43,7 @@ export default function Quiz() {
   function playagain() {
     document.getElementById("score-holder").innerHTML = "";
     fetchData();
+    window.scrollTo(0, 0);
     setFinished(false);
     setWin(false);
   }
