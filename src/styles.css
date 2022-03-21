@@ -14,6 +14,7 @@ body {
   justify-content: center;
   align-items: center;
   position: relative;
+  overflow: hidden;
 }
 
 .bottom-blob {
@@ -79,12 +80,13 @@ body {
   align-items: left;
   gap: 2em;
   margin: 0 auto;
-  width: 60%;
+  width: 70%;
 }
 
 .all-answers {
   display: flex;
   gap: 2em;
+  flex-wrap: wrap;
 }
 
 .choice {
@@ -96,6 +98,11 @@ body {
 
 .question-title {
   color: #293264;
+}
+
+.list-wrapper {
+  max-width: 90%;
+  display: flex;
 }
 
 .list-elements {
@@ -126,11 +133,4 @@ body {
   align-self: center;
   font-size: 1.5rem;
   color: #293264;
-}
-
-.correct {
-  background-color: rgb(57, 216, 123);
-  color: #293264;
-  padding: 10px;
-  border-radius: 20px;
 }

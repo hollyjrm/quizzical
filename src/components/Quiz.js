@@ -82,8 +82,25 @@ export default function Quiz() {
           {question.allAnswers.map((ans) => {
             const styles = {
               backgroundColor: question.chosenAnswer === ans ? "#D6DBF5" : "",
+
               border:
                 question.chosenAnswer === ans ? "none" : "solid 1px #293264",
+            };
+            const finishedStyles = {
+              backgroundColor:
+                ans === question.chosenAnswer &&
+                question.chosenAnswer !== question.correct_answer
+                  ? "#CD5C5C"
+                  : ans === question.correct_answer
+                  ? " rgb(57, 216, 123)"
+                  : "",
+              border:
+                ans === question.chosenAnswer &&
+                question.chosenAnswer !== question.correct_answer
+                  ? "#CD5C5C"
+                  : ans === question.correct_answer
+                  ? " rgb(57, 216, 123)"
+                  : "solid 1px #293264",
             };
             return (
               <h3
@@ -91,13 +108,9 @@ export default function Quiz() {
                   chooseAnswer(ans, question.id);
                 }}
                 id="choice"
-                style={styles}
+                style={finished ? finishedStyles : styles}
                 key={ans}
-                className={
-                  finished && ans === question.correct_answer
-                    ? "correct"
-                    : "choice"
-                }
+                className="choice"
               >
                 {he.decode(ans)}
               </h3>
