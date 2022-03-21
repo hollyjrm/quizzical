@@ -47,6 +47,9 @@ export default function Quiz() {
   }
 
   function chooseAnswer(answer, questionId) {
+    if (finished) {
+      return;
+    }
     console.log(answer, questionId);
     setQuestions((prevState) => {
       return prevState.map((eachQuestion) => {
