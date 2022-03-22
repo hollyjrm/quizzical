@@ -16,7 +16,7 @@ export default function Quiz() {
     playagain();
   }, []);
   const fetchData = () => {
-    fetch("https://opentdb.com/api.php?amount=5&difficulty=easy")
+    fetch("https://opentdb.com/api.php?amount=5")
       .then((res) => res.json())
       .then((res) => {
         console.log(res.results);
