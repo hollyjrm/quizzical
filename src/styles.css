@@ -134,3 +134,8 @@ body {
   font-size: 1.5rem;
   color: #293264;
 }
+
+canvas {
+  height: 100%;
+  width: 100%;
+}

@@ -19,7 +19,6 @@ export default function Quiz() {
     fetch("https://opentdb.com/api.php?amount=5")
       .then((res) => res.json())
       .then((res) => {
-        console.log(res.results);
         setQuestions(
           res.results.map((q) => {
             const tempAnswers = [...q.incorrect_answers];
@@ -52,7 +51,7 @@ export default function Quiz() {
     if (finished) {
       return;
     }
-    console.log(answer, questionId);
+
     setQuestions((prevState) => {
       return prevState.map((eachQuestion) => {
         if (eachQuestion.id === questionId) {
@@ -128,7 +127,7 @@ export default function Quiz() {
 
   return (
     <div className="question-elements">
-      {win && <Confetti width={width} height={height} />}
+      {win && <Confetti numberOfPieces="200" width={width} height={height} />}
       {questionElements}
       <button
         onClick={finished ? playagain : checkScore}
